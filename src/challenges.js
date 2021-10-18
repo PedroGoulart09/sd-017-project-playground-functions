@@ -18,7 +18,6 @@ function splitSentence(string) {
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}` 
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -39,9 +38,25 @@ function highestCount(arr) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+   let distanciaCat1 = Math.abs(cat1 - mouse)
+   let distanciaCat2 = Math.abs(cat2 - mouse)
+   
+   console.log(distanciaCat1, distanciaCat2)
+  if(distanciaCat1 > distanciaCat2) {
+    return 'cat2'
+  }
+  if(distanciaCat2 > distanciaCat1) {
+    return 'cat1'
+  }
+  if(distanciaCat1 == distanciaCat2) {
+    return 'os gatos trombam e o rato foge'
+  }
+  
+
 }
+console.log(catAndMouse(1,0,2))
+
 
 // Desafio 8
 function fizzBuzz() {
