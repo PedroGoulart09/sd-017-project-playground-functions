@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 }
-console.log(catAndMouse(1, 0, 2))
+
 
 
 // Desafio 8
