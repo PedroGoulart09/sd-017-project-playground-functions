@@ -13,36 +13,6 @@ function techList(arr, name) {
   return res;
 }
 
-function validNumber(arr) {
-  for (let n of arr) {
-    if (n < 0 || n > 9) {
-      return false;
-    }
-  }
-  return true;
-}
-
-function repetedNumber(arr) {
-  let count = 0;
-  for (let n of arr) {
-    for (let n2 of arr) {
-      if (n2 === n) {
-        count += 1;
-      }
-    }
-    if (count > 2) {
-      return false;
-    }
-    count = 0;
-  }
-  return true;
-}
-
-
-
-
-
-
 
 
 // Desafio 11
@@ -58,11 +28,11 @@ function generatePhoneNumber(arr) {
         count++;
       }
     }
-    if (arr[i] < 0 || arr[i] > 9 || count >=3) {
+    if (arr[i] < 0 || arr[i] > 9 || count >= 3) {
       return "não é possível gerar um número de telefone com esses valores"
     }
-    
-    number = number.replace('x',arr[i])
+
+    number = number.replace('x', arr[i])
   }
   return number;
 
