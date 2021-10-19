@@ -47,8 +47,25 @@ function repetedNumber(arr) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  // seu código aqui
-  
+  if (arr.length != 11) {
+    return "Array com tamanho incorreto."
+  }
+  let number = '(xx) xxxxx-xxxx'
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++;
+      }
+    }
+    if (arr[i] < 0 || arr[i] > 9 || count >=3) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+    
+    number = number.replace('x',arr[i])
+  }
+  return number;
+
 }
 
 // Desafio 12
@@ -74,10 +91,10 @@ function hydrate(string) {
     count += Number(match[i])
   }
   if (count > 1) {
-     return `${count} copos de água`
+    return `${count} copos de água`
   }
   return `${count} copo de água`
-  
+
 }
 
 
